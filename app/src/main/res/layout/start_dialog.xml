@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/opaque"
+
+    >
+
+    <Button
+        android:id="@+id/single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="Single Card"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_below="@+id/single"
+        android:text="Multiple Cards"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>

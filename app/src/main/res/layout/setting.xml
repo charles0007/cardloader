@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".Setting">
+
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        >
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/setting_list"
+
+    >
+
+</ListView>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/cab_reg_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        >
+
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CardLoader Android 1.0 @icode"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+
+

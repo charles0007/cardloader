@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="70dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:gravity="center_horizontal|center_vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/layStart">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape"
+            android:id="@+id/btnStart"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/laySetting"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layStart">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:id="@+id/btnSetting"
+            android:background="@drawable/shape"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layAbt"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/laySetting">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:id="@+id/abt"
+            android:padding="10dp"
+            android:background="@drawable/shape"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layRate"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/layAbt">
+        <Button
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Us"
+            android:textSize="18sp"
+            android:id="@+id/btnRate"
+            android:background="@drawable/pink_shape"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="35dp"
+        ads:adSize="SMART_BANNER"
+
+        ads:adUnitId="ca-app-pub-5527620381143347/4119448965">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

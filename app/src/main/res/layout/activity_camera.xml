@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".google.OcrCaptureActivity"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+    >
+
+
+    <cardloader.icode.cardloader.google.ui.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <cardloader.icode.cardloader.google.ui.camera.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </cardloader.icode.cardloader.google.ui.camera.CameraSourcePreview>
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_height="190dp"
+        android:id="@+id/image_dialog_layout"
+        >
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:hint="No pin found"
+            android:inputType="number"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/image_dialog_textEdit"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Recharge "
+
+            android:textColor="@color/focus_box_corner"
+            android:padding="5dp"
+            android:id="@+id/btnRecharge"
+            android:background="@drawable/shape"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ca-app-pub-5527620381143347/4119448965">
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
+
+    <!--<Button-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/shutter_button"-->
+        <!--android:layout_gravity="center_horizontal|bottom"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:background="@drawable/camera" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="75dp"-->
+        <!--android:layout_height="75dp"-->
+        <!--android:id="@+id/focus_button"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:layout_marginEnd="50dp"-->
+        <!--android:layout_marginBottom="22dp"-->
+        <!--android:text=" Focus "-->
+        <!--android:textColor="@color/white"-->
+        <!--android:background="@drawable/focus_normal"-->
+        <!--/>-->
+
+</FrameLayout>

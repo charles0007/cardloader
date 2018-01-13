@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'HyCode'
+            keyPassword '080charly'
+            storeFile file('C:/Users/user/Desktop/Charles/CardLoader/androidloaderrelease.jks')
+            storePassword '080charly'
+        }
+    }
+    compileSdkVersion 25
+//    buildToolsVersion "26.02"
+    defaultConfig {
+        applicationId "cardloader.icode.cardloader"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 9
+        versionName 'CardLoader 1.0'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            versionNameSuffix '1.0'
+            signingConfig signingConfigs.config
+        }
+    }
+    flavorDimensions "cardloader"
+
+    productFlavors {
+        flavor {
+            minSdkVersion 19
+            applicationId 'cardloader.icode.cardloader'
+            signingConfig signingConfigs.config
+            targetSdkVersion 25
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            versionCode 9
+            versionName 'CardLoader 1'
+            dimension "cardloader"
+
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    testCompile 'junit:junit:4.12'
+    //    compile 'com.rmtheis:tess-two:5.4.1'
+    compile 'com.google.android.gms:play-services-vision:9.8.0'
+    compile 'com.google.firebase:firebase-ads:9.8.0'
+    compile 'com.google.firebase:firebase-crash:9.8.0'
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+apply plugin: 'com.google.gms.google-services'
